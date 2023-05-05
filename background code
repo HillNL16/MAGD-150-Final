@@ -1,0 +1,72 @@
+let img;
+  function preload() {
+  img = loadImage('door.png');
+  }
+
+function setup() {
+  createCanvas(700, 400);
+}
+
+function draw() {
+  background(108, 93, 81);
+  strokeWeight(6);
+  
+  //carpet
+  fill(87, 47, 59);
+  quad(90, 380, 151,300, 622,300, 550, 380);
+  
+  
+  //right counter
+  fill(37, 23, 30);
+  square(620,190,80);
+  rect(360,150,200,80);
+  fill(37, 23, 30);
+  quad(619,270,620,190,562,151,560,230);
+  fill(0);
+  beginShape();
+  vertex(360,150);
+  vertex(360, 135);
+  vertex(620, 135);
+  vertex(700, 190);
+  vertex(620,190);
+  vertex(562,150);
+  endShape();
+  
+  //wall outline 
+  line(620,135,620,5);
+  line(360,230,80,230);
+  
+  //shelfs
+  fill(0);
+  stroke(0);
+  line(230,100,340,100);
+  line(230,70,340,70);
+  line(230,40,340,40);
+  
+  //hangers
+  stroke(0);
+  ellipse(250,120,10,10);
+  ellipse(285,120,10,10);
+  ellipse(320,120,10,10);
+  
+  //left counter
+  fill(37, 23, 30);
+  quad(0,365,80,260,80,155,0,255);
+  fill(0);
+  beginShape();
+  vertex(0,255);
+  vertex(77, 150);
+  vertex(0, 150);
+  endShape();
+  
+  //menu
+  fill(117, 133, 101);
+  rect(20,20,60,100);
+  
+  //window
+  
+  
+  //door
+  image(img,60,45);
+  
+}
